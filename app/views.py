@@ -48,9 +48,9 @@ def post(request):
         
             return render(request,'app/blog.html')
 
-def home(request):
+def index(request):
   
-    return render(request,'app/home.html')
+    return render(request,'app/index.html')
 
 def contact(request):
     return render(request,'app/contact.html')
