@@ -1,0 +1,68 @@
+{%extends "app/layout.html"%}
+{%block body%}
+    {%if joking%}
+      {%for model in model_view%}
+      <div class="container">
+        <div class="card">
+            <div class="card-header">
+            
+            {{model.author}}
+            </div>
+            <div class="card-body">
+              <h4 class="card-title">{{model.title}}</h4>
+                <p class="card-text">{{model.text}}<img src="{{model.photo}}" alt="no image"></p>
+                  
+                   
+              <a href="#" class="btn btn-primary">Comments <span class="badge badge-light"> 4</span> </a> <small>Posted on: {{model.created}}</small>
+            </div>
+          </div>
+          <br><br>
+
+      {%endfor%}
+      {%for joke in jokes%}
+      
+      <div class="">
+      <div class="card">
+          <div class="card-header">
+          
+            {{joke.type}}
+          </div>
+          <div class="card-body">
+            <h4 class="card-title">{{joke.setup}}</h4>
+              <p class="card-text">{{joke.punchline}}<img src="{{model.photo}}" alt="no image"></p>
+                
+                 
+            <a href="#" class="btn btn-primary">Comments <span class="badge badge-light"> 4</span> </a> <small>Posted on: {{time}}</small>
+          </div>
+        </div>
+        <br><br>
+
+      
+        {%endfor%}
+
+         {%else%}
+         {%for model in model_view%}
+      <div class="container">
+        <div class="card">
+            <div class="card-header">
+            
+                {{model.author}}
+            </div>
+            <div class="card-body">
+              <h4 class="card-title">{{model.title}}</h4>
+                <p class="card-text">{{model.text}}
+                   
+                   <img src="{{model.photo}}" alt="no image"></p>
+                  
+                   
+              <a href="#" class="btn btn-primary">Comments <span class="badge badge-light"> 4</span> </a> <small>Posted on: {{model.created}}</small>
+            </div>
+          </div>
+        </div>
+          <br><br>
+
+      {%endfor%}
+         {%endif%}
+
+    
+{%endblock%}

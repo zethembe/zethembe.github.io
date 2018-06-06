@@ -1,0 +1,21 @@
+{%extends "app/layout.html"%}
+{%load staticfiles%}
+{%block body%}
+<style>
+    .social{
+    height: 50px;
+    width: 50px;
+}
+</style>
+<div class="jumbotron container">
+    <h1 class="display-3">Contact me!</h1>
+    <p class="lead">Let's work on a project together.</p>
+    <hr class="my-4">
+    <p>Contact me</p>
+    <p class="lead">
+      <a href="#"><img class="social rounded float-left" src="{%static "facebook.jpg"%}" alt=""></a>  
+      <a href="mailto:mpumelelodlamuni@gmail.com"><img class="social rounded float-left" src="{%static "gmail.jpg"%}" alt=""></a>
+    </p>
+  </div>
+
+{%endblock%}

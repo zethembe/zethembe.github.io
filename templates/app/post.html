@@ -1,0 +1,12 @@
+
+       {%extends "app/layout.html"%}
+       {%block body%}
+              <form method="POST" class="jumbotron container">
+                  <h1 class="display-4">Whats on your mind</h1>
+
+                 {%csrf_token%}
+                 {{form.as_p}}
+                 <button type="submit" class="btn btn-outline-success">Post</button>
+
+              </form>
+              {%endblock%}

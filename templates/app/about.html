@@ -1,0 +1,43 @@
+{%extends "app/layout.html"%}
+{%block body%}
+{%load staticfiles%}
+      
+      <div class="jumbotron container">
+          <img src="{%static "image.jpg"%}" alt="" width="100" height="200"  class=" rounded float-left img-fluid"/>
+        <h1 class="display-4">ABOUT ME</h1>
+        <h4 class="display-5">Web Developer</h4>
+
+
+        <p class="lead">Fullstack web developer currently working as a freelancer
+        </p>
+        <hr class="my-4">
+        <p>You can also check out the projects i have worked on.</p>
+        <p class="lead">
+          <a class="btn btn-primary" href="{%static "resume.pdf"%}" role="button">Resume</a>
+          <a class="btn btn-primary" href='#' role="button">Certificates</a>
+          <a class="btn btn-primary" href='#' role="button">Projects</a>
+        </p>
+      </div>
+      <h1 style="font-weight: bolder;" class="display-3 container">Can work with: </h1>
+      
+      <div class="container">
+      <img class="round" src="{%static "html_css.jpg"%}" alt="...">
+      
+    
+      <img style="border-color:green;" class="round" src="{%static "python.jpg"%}"  alt="...">
+      <img style="border-color:orange;" class="round" src="{%static "javascript.jpg"%}" alt="...">
+      
+    
+      <br><br><br>
+      <img style="border-color:orange;" class="round" src="{%static "jquery.jpg"%}" alt="...">
+      <img style="border-color: green;" class="round" src="{%static "django.jpg"%}"  alt="...">
+
+      <ul>
+        <li class="move" style="color:green;">Comfortable</li>
+        <li class="move" style="color:#3377ff;">More comfortable</li>
+        <li class="move" style="color:orange;">Less comfortable</li>
+      </ul>
+    </div>
+    </div>
+
+{%endblock%}
